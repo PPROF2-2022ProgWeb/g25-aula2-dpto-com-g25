@@ -1,0 +1,22 @@
+<h2>Productos</h2>
+
+<div *ngFor="let producto of productos">
+
+<h3>
+
+<a [title]="producto.nombre + ' details'">
+{{ producto.nombre }}
+</a>
+</h3>
+
+<img [src]="producto.img" alt="..." style="height: 380px;">
+
+<p *ngIf="producto.descripcion">
+Descripcion: {{ producto.descripcion }}
+</p>
+
+<p *ngIf=producto.precio>
+Precio: {{ producto.precio }}
+</p>
+
+</div>
