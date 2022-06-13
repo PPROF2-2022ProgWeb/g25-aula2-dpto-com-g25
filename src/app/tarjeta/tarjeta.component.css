@@ -1,0 +1,12 @@
+.tarjeta {
+    width: 20rem;
+    height: 30rem;
+    padding: 1em;
+}
+
+.tarjeta-img {
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+}
+

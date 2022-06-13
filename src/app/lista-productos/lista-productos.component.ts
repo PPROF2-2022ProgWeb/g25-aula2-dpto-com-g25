@@ -8,6 +8,4 @@ import { productos } from '../../productos-db';
 })
 export class ListaProductosComponent {
   productos = productos;
-
-
 }
