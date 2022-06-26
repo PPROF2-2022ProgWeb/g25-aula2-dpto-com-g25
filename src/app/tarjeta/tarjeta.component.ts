@@ -1,5 +1,5 @@
 import {Component, Input } from '@angular/core';
-import {productos, Productos} from '../../productos-db';
+import {Productos} from '../../productos-db';
 
    @Component({
      selector: 'app-tarjeta',
