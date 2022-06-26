@@ -1,0 +1,30 @@
+<div *ngIf="producto" class="container-fluid">
+    <br>
+    <button class="btn btn-success btn-sm" (click)="goBack()">Atrás</button>
+    <hr>
+    <div class="row" >
+      <!-- Display the Poster here  -->
+      <div class="col-sm-3">
+        <figure class="figure">
+          <img src="{{ producto.img }}" class="figure-img img-fluid rounded" alt="..." style="max-height: 469px;">
+        </figure>
+      </div>
+        
+        <!-- Anime Profile -->
+      <div class="col-sm-9">
+        <div class="card">
+          
+          <div class="card-header">
+            <h3 class="card-title">{{producto.nombre | uppercase }}</h3>
+          </div>
+  
+          <div class="card-body">              
+            <h5 class="card-title">Description :</h5>
+            <p class="card-text">{{ producto.descripcion }}</p>
+            <p class="card-text">{{ producto.precio | currency }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>

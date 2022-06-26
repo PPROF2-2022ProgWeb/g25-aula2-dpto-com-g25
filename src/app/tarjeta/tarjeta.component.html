@@ -1,8 +1,12 @@
-<div class="card tarjeta col" style="width: 18rem;">
+<div class="card tarjeta">
    <img [src]=producto.img class="card-img-top" alt="...">
    <div class="card-body">
      <h5 class="card-title">{{ producto.nombre }}</h5>
      <p class="card-text">{{producto.descripcion}}</p>
-     <a href="#" class="btn btn-success">Ver producto</a>
+     <a 
+     [routerLink]="['/producto', id]"
+     type="button"
+     class="btn btn-success"
+     >Ver producto</a>
    </div>
  </div>
