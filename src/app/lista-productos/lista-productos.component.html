@@ -2,9 +2,9 @@
 <div class="container">
   <div class="row">
       <app-tarjeta
-          *ngFor="let producto of productos;index as id" class="col-md-4"
+          *ngFor="let producto of productos" class="col-md-4"
           [producto]='producto'
-          [id] = id>
+          [id] = producto.id>
       </app-tarjeta>
     </div>
     </div>

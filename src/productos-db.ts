@@ -19,7 +19,7 @@ export const productos: Productos[] = [
     nombre: 'Cerveza Diosa Tropical',
     img:'./assets/img/cerveza-diosa.jpg',
     precio: 250,
-    descripcion: 'La birra de los cumbieros'
+    descripcion: '¡Cumbia nena!'
   },
   {
     id: 3,

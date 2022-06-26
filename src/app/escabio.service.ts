@@ -9,6 +9,6 @@ import {Observable, of} from 'rxjs';
 
 export class EscabioService {
   getProducto(id: number): Observable<any> {
-    return of(productos.find(producto => producto.id === id + 1));
+    return of(productos.find(producto => producto.id === id));
   }
 }
