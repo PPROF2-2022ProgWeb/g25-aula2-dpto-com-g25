@@ -4,6 +4,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { GaleryComponent } from './galery/galery.component';
+import { CarrouselComponent } from './carrousel/carrousel.component';
 
 
 
@@ -14,7 +15,8 @@ import { GaleryComponent } from './galery/galery.component';
     FooterComponent,
     NavbarComponent,
     HeaderComponent,
-    GaleryComponent
+    GaleryComponent,
+    CarrouselComponent
   ],
   imports: [
     CommonModule
@@ -24,7 +26,8 @@ import { GaleryComponent } from './galery/galery.component';
     NavbarComponent,
     FooterComponent,
     HeaderComponent,
-    GaleryComponent
+    GaleryComponent,
+    CarrouselComponent
   ],
 })
 export class LayoutsModule { }
