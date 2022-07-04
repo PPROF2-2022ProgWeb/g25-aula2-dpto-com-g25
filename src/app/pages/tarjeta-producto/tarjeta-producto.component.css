@@ -1,0 +1,9 @@
+.tarjeta {
+    margin-top: 1em;
+}
+
+img {
+    height: 30em;
+    align-content: center;
+    object-fit: contain;
+}

@@ -1,0 +1,9 @@
+<div class="container my-2">
+  <div class="row">
+      <app-tarjeta
+          *ngFor="let producto of productos" class="col-md-4"
+          [producto]='producto'
+          [id] = producto.id>
+      </app-tarjeta>
+    </div>
+    </div>
