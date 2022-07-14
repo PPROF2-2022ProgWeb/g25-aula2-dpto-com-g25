@@ -18,10 +18,7 @@ import { ListaProductosComponent } from './pages/lista-productos/lista-productos
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot([
-      {path: '', component: ListaProductosComponent},
-      {path: 'producto/:id', component: DetalleProductoComponent},
-    ]),
+    RouterModule,
     LayoutsModule,
     PagesModule,
   ],
