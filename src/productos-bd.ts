@@ -30,18 +30,17 @@ export interface Productos {
       nombre: `Hesperidina`,
       img:`./assets/img/hesperidina.jpg`,
       precio: 450,
-      descripcion: `El trago de los viejos`,
-      detalle: `La Hesperidina es una bebida argentina a base de corteza de naranjas amargas o agrias y dulces de frutos inmaduros. Su sabor es suave,
-       dulce, y se suele mezclar con agua tónica, agua gaseosa, gaseosa de lima y limón, o como mezcla en diferentes tragos o cócteles.`
+      descripcion: `The drink of the elderly`,
+      detalle: `Hesperidin is an Argentine drink based on the rind of bitter or sour oranges and sweets of immature fruits. Its flavor is mild, sweet, and is usually mixed with tonic water, carbonated water, lime and lemon soda, or as a mixture in different drinks or cocktails.`
     },
     {
       id: 4,
       nombre: `Ron Havanna`,
       img:`./assets/img/ron.webp`,
       precio: 450,
-      descripcion: `Oye chico`,
-      detalle: `Havana Club es una marca de ron que es fabricado en Santa Cruz del Norte, Cuba. La marca fue establecida en 1934 por 
-      José Arechabala S.A. y fue nacionalizada en 1960 después de la Revolución cubana.`
+      descripcion: `Havana Club`,
+      detalle: `Havana Club is a brand of rum that is manufactured in Santa Cruz del Norte, Cuba. The brand was established in 1934 by 
+      José Arechabala S.A. and was nationalized in 1960 after the Cuban Revolution.`
     },
     {
       id: 5,
