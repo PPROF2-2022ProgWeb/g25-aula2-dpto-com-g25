@@ -1,27 +1,34 @@
-# AppDelEscabio
+g# AppDelEscabio
+Una app e-comerce que utiliza filtros para encontrar productos, construida con Angular, JavaScript y CSS, usando phpMyAdmin SQL como base de datos.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
+## Screenshots del proyecto:
+//AGREGAR GIF
 
-## Development server
+## Instrucciones de instalación y configuración
+Clona este repositorio. Necesitará node y npm instalados globalmente en su máquina.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Instalacion:
 
-## Code scaffolding
+npm install
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para correr el proyecto:
+`ng serve`
 
-## Build
+## Para navegar por la aplicación:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+`http://localhost:4200/`.
 
-## Running unit tests
+## Librerias
+Entre las librerias destacadas que se utilizaron para desarrollar esta app estan: 
+ -Boostrap: debido a que facilitan mucho el trabajo a la hora de obtener un diseño responsive y esteticamente agradable a la vista.
+ -phpMyAdmin SQL: nos sirvio para poder tener una base de datos desde donde poder trabajar con la informacion de los productos, imagenes, stock, etc. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Dependencias
+    "@angular/animations": "~13.3.0"
+    "@angular/router": "~13.3.0"
+    "bootstrap": "^5.1.3"
+    "@angular/cli": "~13.3.7",
+    "typescript": "~4.6.2"
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Objetivo
+Esta aplicación fue desarrollada para el Instituto Politécnico Córdoba, donde el objetivo final es obtener una aplicacion e-commerce funcional.
