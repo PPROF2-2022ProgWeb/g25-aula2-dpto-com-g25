@@ -19,7 +19,7 @@ Para correr el proyecto:
 `http://localhost:4200/`.
 
 ## Librerias
-Entre las librerias destacadas que se utilizaron para desarrollar esta app estan: 
+Entre las librerias destacadas que se utigit pullizaron para desarrollar esta app estan: 
  -Boostrap: debido a que facilitan mucho el trabajo a la hora de obtener un diseño responsive y esteticamente agradable a la vista.
  -phpMyAdmin SQL: nos sirvio para poder tener una base de datos desde donde poder trabajar con la informacion de los productos, imagenes, stock, etc. 
 
