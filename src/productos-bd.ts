@@ -23,7 +23,7 @@ export interface Productos {
       img:`./assets/img/cerveza-diosa.jpg`,
       precio: 250,
       descripcion: `Cumbia babe!`,
-      detalle: `Diosa Tropical was a brand of beer brewed by Isenbeck for the consumption of the public fond of tropical dancing and cumbia. `
+      detalle: `Diosa Tropical was a brand of beer brewed by Isenbeck for the consumption of the public fond of tropical dancing and cumbia.`
     },
     {
       id: 3,
@@ -31,11 +31,12 @@ export interface Productos {
       img:`./assets/img/hesperidina.jpg`,
       precio: 450,
       descripcion: `The drink of the elderly`,
-      detalle: `Hesperidin is an Argentine drink based on the rind of bitter or sour oranges and sweets of immature fruits. Its flavor is mild, sweet, and is usually mixed with tonic water, carbonated water, lime and lemon soda, or as a mixture in different drinks or cocktails.`
+      detalle: `Hesperidin is an Argentine drink based on the rind of bitter or sour oranges and sweets of immature fruits. Its flavor is mild, sweet, 
+      and is usually mixed with tonic water, carbonated water, lime and lemon soda, or as a mixture in different drinks or cocktails.`
     },
     {
       id: 4,
-      nombre: `Ron Havanna`,
+      nombre: `Havanna Club Rum`,
       img:`./assets/img/ron.webp`,
       precio: 450,
       descripcion: `Havana Club`,
@@ -48,9 +49,9 @@ export interface Productos {
       img:`./assets/img/amargo-obrero.webp`,
       precio: 450,
       descripcion: `The drink of the proletariat`,
-      detalle: `Amargo Obrero It is a drink invented in the city of Rosario, Santa Fe, in 1888, as a mixture of aromatic herbs
-      serranas. What postulates it as a "drink of the people" is its original purpose: to set itself up as a bitter reaction to the sweet drinks that
-      took the bourgeois classes. `
+      detalle: `Amargo Obrero is a drink invented in Rosario city (Argentina), in 1888, as a mixture of aromatic herbs. 
+      What postulates it as a "drink of the people" is its original purpose: to set itself up as a bitter reaction to 
+      the sweet drinks that took the bourgeois classes.`
     },
     {
       id: 6,
