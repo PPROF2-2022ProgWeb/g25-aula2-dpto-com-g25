@@ -48,19 +48,19 @@ export interface Productos {
       nombre: `Amargo Obrero`,
       img:`./assets/img/amargo-obrero.webp`,
       precio: 450,
-      descripcion: `El trago del proletariado`,
-      detalle: `Amargo Obrero es una bebida inventada en la ciudad de Rosario, Santa Fe, en el año 1888, como una mezcla de hierbas aromáticas 
-      serranas. Lo que lo postula como una “bebida del pueblo” es su finalidad original: erigirse en reacción amarga ante las bebidas dulces que 
-      tomaban las clases burguesas. `
+      descripcion: `The drink of the proletariat`,
+      detalle: `Amargo Obrero It is a drink invented in the city of Rosario, Santa Fe, in 1888, as a mixture of aromatic herbs
+      serranas. What postulates it as a "drink of the people" is its original purpose: to set itself up as a bitter reaction to the sweet drinks that
+      took the bourgeois classes. `
     },
     {
       id: 6,
       nombre: `Campari`,
       img:`./assets/img/campari.jpg`,
       precio: 450,
-      descripcion: `Con naranja`,
-      detalle: `Campari es una bebida alcohólica de grado medio, tonificante y refrescante, calificable como aperitivo, de característico color rojo 
-      y sabor amargo.`
+      descripcion: `With orange`,
+      detalle: `Campari is a medium-grade alcoholic beverage, invigorating and refreshing, classifiable as an aperitif, with a characteristic red color
+      and bitter taste.`
     }
   
   ];
