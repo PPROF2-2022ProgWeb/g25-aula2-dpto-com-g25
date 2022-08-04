@@ -77,6 +77,16 @@ export interface Productos {
       descripcion: `Con naranja`,
       detalle: `Campari es una bebida alcohólica de grado medio, tonificante y refrescante, calificable como aperitivo, de característico color rojo 
       y sabor amargo. La marca es propiedad del Grupo Campari. `
+    },
+    {
+      id: 7,
+      nombre: `Vinysoda`,
+      img:`./assets/img/vinysoda.jpg`,
+      precio: 450,
+      descripcion: `Con un susto de soda`,
+      detalle: `Elaborado con uvas bonarda producidas en la provincia vitivinícola de Mendoza y fusionado con agua gasificada, 
+      Vinysoda es presentado en packaging lata de 473 cc. Únicos en el mercado pero no en tus origenes, en aquellos recuerdos de tu infancia,
+       así es como nace Vinysoda, una marca joven y canchera 100% esencia argentina.`
     }
   
   ];
