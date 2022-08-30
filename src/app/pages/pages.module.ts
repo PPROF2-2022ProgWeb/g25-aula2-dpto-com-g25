@@ -4,6 +4,7 @@ import { AppRoutingModule } from './../app-routing.module';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
 import { TarjetaProductoComponent } from './tarjeta-producto/tarjeta-producto.component';
 import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
+import { RegistroComponent } from './registro/registro.component';
 
 
 
@@ -11,7 +12,8 @@ import { DetalleProductoComponent } from './detalle-producto/detalle-producto.co
   declarations: [
     ListaProductosComponent,
     TarjetaProductoComponent,
-    DetalleProductoComponent
+    DetalleProductoComponent,
+    RegistroComponent
   ],
   imports: [
     CommonModule,
