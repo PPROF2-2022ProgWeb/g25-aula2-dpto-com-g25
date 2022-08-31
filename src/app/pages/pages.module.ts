@@ -5,6 +5,7 @@ import { ListaProductosComponent } from './lista-productos/lista-productos.compo
 import { TarjetaProductoComponent } from './tarjeta-producto/tarjeta-producto.component';
 import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
 import { RegistroComponent } from './registro/registro.component';
+import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 
 
 
@@ -13,7 +14,8 @@ import { RegistroComponent } from './registro/registro.component';
     ListaProductosComponent,
     TarjetaProductoComponent,
     DetalleProductoComponent,
-    RegistroComponent
+    RegistroComponent,
+    QuienesSomosComponent
   ],
   imports: [
     CommonModule,
