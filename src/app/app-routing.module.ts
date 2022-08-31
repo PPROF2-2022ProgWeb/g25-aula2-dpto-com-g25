@@ -4,14 +4,15 @@ import { DetalleProductoComponent } from './pages/detalle-producto/detalle-produ
 import { ListaProductosComponent } from './pages/lista-productos/lista-productos.component';
 import { RegistroComponent } from './pages/registro/registro.component';
 
-const routes: Routes = [{path: '', component: ListaProductosComponent},
-{path: 'producto/:id', component: DetalleProductoComponent},
-{path: 'registro/', component: RegistroComponent},
+const   ROUTES: Routes = [
+  {path: 'inicio', component: ListaProductosComponent},
+  {path: 'producto/:id', component: DetalleProductoComponent},
+  {path: 'registro', component: RegistroComponent},
+  {path:'**', pathMatch: 'full', redirectTo: 'inicio'}
 
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+
+  export const AppRoutingModule=RouterModule.forRoot(ROUTES);
+  
+
