@@ -6,6 +6,7 @@ import { TarjetaProductoComponent } from './tarjeta-producto/tarjeta-producto.co
 import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
 import { RegistroComponent } from './registro/registro.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
+import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 
 
 
@@ -15,7 +16,8 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
     TarjetaProductoComponent,
     DetalleProductoComponent,
     RegistroComponent,
-    QuienesSomosComponent
+    QuienesSomosComponent,
+    InicioSesionComponent
   ],
   imports: [
     CommonModule,
