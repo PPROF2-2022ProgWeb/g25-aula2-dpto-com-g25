@@ -5,6 +5,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { GaleryComponent } from './galery/galery.component';
 import { CarrouselComponent } from './carrousel/carrousel.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,7 +20,8 @@ import { CarrouselComponent } from './carrousel/carrousel.component';
     CarrouselComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
 
   exports: [
