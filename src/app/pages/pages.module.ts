@@ -7,6 +7,7 @@ import { DetalleProductoComponent } from './detalle-producto/detalle-producto.co
 import { RegistroComponent } from './registro/registro.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
+import { FormsModule} from '@angular/forms';
 
 
 
@@ -21,7 +22,8 @@ import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
 })
 export class PagesModule { }

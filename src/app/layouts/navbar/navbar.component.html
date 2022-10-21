@@ -11,20 +11,18 @@
         
                 
             </ul>
-            <form class="d-inline p-2">
-                <button class="btn btn-outline-success border border-2 border-success m-sm-1 " type="submit">
-                   
-                    <a class="nav-link bi-cart-fill me-1 "     [routerLink]="['inicio-sesion']">Iniciar Sesion</a>
-                    
-                 
+            
+                <button class="btn btn-outline-success border border-2 border-success m-sm-1 " type="button">   
+                    <a class="nav-link bi-cart-fill me-1 " [routerLink]="['inicio-sesion']">Iniciar Sesion</a>
                 </button> 
-                <button class="btn btn-outline-success border border-2 border-success m-sm-1 " type="submit">
+                <button class="btn btn-outline-success border border-2 border-success m-sm-1 " type="button">
                     <i class="bi-cart-fill me-1"></i>
                     Carrito
                     <span class="badge bg-success text-white ms-1 rounded-pill">0</span>
                 </button>
+                <button type="button" class="btn btn-outline-warning border border-2 border-warning m-sm-1" *ngIf="isLoggedIn" (click)="logout()">LogOut</button>
                 
-            </form>
+            
         </div>
     </div>
 </nav>
