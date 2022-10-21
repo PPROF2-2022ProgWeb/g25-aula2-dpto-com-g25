@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TokenStoreService } from '../../services/token-store.service';
-import { LoginDataService } from 'src/app/services/login-data.service';
 
 
 @Component({
@@ -10,15 +8,9 @@ import { LoginDataService } from 'src/app/services/login-data.service';
 })
 export class RegistroComponent implements OnInit {
 
-  constructor(private tokenStorage: TokenStoreService, 
-    private loggedIn: LoginDataService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    if (this.tokenStorage.getToken()) {
-      this.loggedIn.changeLogged(true);
-      //this.isLoggedIn = true;
-      //this.roles = this.tokenStorage.getUser().roles;
-    }
   }
 
 }

@@ -1,7 +1,5 @@
 import { Component} from '@angular/core';
 import { productos } from '../../../productos-bd';
-import { TokenStoreService } from '../../services/token-store.service';
-import { LoginDataService } from 'src/app/services/login-data.service';
 
 @Component({
   selector: 'app-lista-productos',
@@ -11,14 +9,8 @@ import { LoginDataService } from 'src/app/services/login-data.service';
 export class ListaProductosComponent {
   productos = productos;
 
-  constructor(private tokenStorage: TokenStoreService, 
-    private loggedIn: LoginDataService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    if (this.tokenStorage.getToken()) {
-      this.loggedIn.changeLogged(true);
-      //this.isLoggedIn = true;
-      //this.roles = this.tokenStorage.getUser().roles;
-    }
   }
 }
