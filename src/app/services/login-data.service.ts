@@ -13,6 +13,5 @@ export class LoginDataService {
 
   changeLogged(logged: boolean) {
     this.logged.next(logged);
-    console.log(logged);
   }
 }
