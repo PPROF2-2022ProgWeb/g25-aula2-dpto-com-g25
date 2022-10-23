@@ -43,12 +43,10 @@ export class InicioSesionComponent implements OnInit, OnDestroy {
 
         this.isLoginFailed = false;
         this.loggedIn.changeLogged(true);
-        //this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
         if (this.roles.includes('ROLE_ADMIN')){
         this.router.navigate(['/registro']);
         }
-        //this.reloadPage();
       },
       error: err => {
         this.errorMessage = err.error.message;

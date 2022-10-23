@@ -23,7 +23,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
       this.loggedIn.changeLogged(true);
-      //this.isLoggedIn = true;
       //this.roles = this.tokenStorage.getUser().roles;
     }
     this.subscription = this.loggedIn.isLoggedIn.subscribe(logged => this.isLoggedIn = logged)
@@ -38,7 +37,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.tokenStorage.signOut();
     this.loggedIn.changeLogged(false);
     this.router.navigate(['/inicio-sesion']);
-    //window.location.reload();
   }
 
 }
