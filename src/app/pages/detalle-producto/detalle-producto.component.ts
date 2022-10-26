@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Productos} from '../../../productos-bd';
-import {ListarService} from '../../services/listar.service';
+import { Producto } from 'src/app/models/producto.model';
+import { ProductoService } from 'src/app/services/producto.service';
 import {ActivatedRoute} from '@angular/router';
 import { Location } from '@angular/common';
 import {Subscription} from 'rxjs';
@@ -12,11 +12,11 @@ import {Subscription} from 'rxjs';
 })
 export class DetalleProductoComponent implements OnInit {
   
-  producto!: Productos;
+  producto!: Producto;
   productoSubscription!: Subscription;
   
   constructor(private route: ActivatedRoute,
-  private listarService: ListarService,
+  private productoService: ProductoService,
   private location: Location) { }
 
   ngOnInit(): void {
@@ -25,7 +25,7 @@ export class DetalleProductoComponent implements OnInit {
 
   getProducto(): void {
     const id = +this.route.snapshot.paramMap.get('id')!;
-    this.productoSubscription = this.listarService.getProducto(id).subscribe(producto => this.producto = producto);
+    this.productoSubscription = this.productoService.findById(id).subscribe(producto => this.producto = producto);
     this.productoSubscription.unsubscribe;
   }
 
