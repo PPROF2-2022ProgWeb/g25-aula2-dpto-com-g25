@@ -7,6 +7,7 @@ import { DetalleProductoComponent } from './detalle-producto/detalle-producto.co
 import { RegistroComponent } from './registro/registro.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
+import { AdminUserComponent } from './admin-user/admin-user.component';
 
 import { AdminProductoComponent } from './admin-producto/admin-producto.component';
 
@@ -24,8 +25,8 @@ import { FormsModule} from '@angular/forms';
     RegistroComponent,
     QuienesSomosComponent,
     InicioSesionComponent,
+    AdminUserComponent,
     AdminProductoComponent,
-
   ],
   imports: [
     CommonModule,
