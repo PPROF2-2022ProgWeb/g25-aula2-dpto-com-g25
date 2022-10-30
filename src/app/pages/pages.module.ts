@@ -9,6 +9,12 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { AdminUserComponent } from './admin-user/admin-user.component';
 
+import { AdminProductoComponent } from './admin-producto/admin-producto.component';
+
+
+import { FormsModule} from '@angular/forms';
+
+
 
 
 @NgModule({
@@ -19,11 +25,13 @@ import { AdminUserComponent } from './admin-user/admin-user.component';
     RegistroComponent,
     QuienesSomosComponent,
     InicioSesionComponent,
-    AdminUserComponent
+    AdminUserComponent,
+    AdminProductoComponent,
   ],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
 })
 export class PagesModule { }

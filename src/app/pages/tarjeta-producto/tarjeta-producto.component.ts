@@ -1,5 +1,5 @@
 import {Component, Input } from '@angular/core';
-import {Productos} from '../../../productos-bd';
+import { Producto } from 'src/app/models/producto.model';
 
 
 
@@ -14,7 +14,7 @@ import {Productos} from '../../../productos-bd';
       
    
      @Input()
-     producto!: Productos;
+     producto!: Producto;
 
      @Input()
      id!: number;

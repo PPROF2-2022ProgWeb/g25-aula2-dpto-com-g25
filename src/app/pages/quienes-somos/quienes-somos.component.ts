@@ -10,6 +10,7 @@ export class QuienesSomosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
