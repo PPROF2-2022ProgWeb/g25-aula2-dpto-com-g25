@@ -11,20 +11,19 @@
                 <li class="nav-item"><a class="nav-link" [routerLink]="['admin-producto']">Admin</a></li>
                 
             </ul>
-            <form class="d-inline p-2">
-                <button class="btn btn-outline-success border border-2 border-success m-sm-1 " type="submit">
-                   
-                    <a class="nav-link bi-cart-fill me-1 "     [routerLink]="['inicio-sesion']">Iniciar Sesion</a>
-                    
-                 
+            
+                <button class="btn btn-outline-success border border-2 border-success m-sm-1 " type="button" *ngIf="!isLoggedIn" [routerLink]="['inicio-sesion']">   
+                    Iniciar Sesion
                 </button> 
-                <button class="btn btn-outline-success border border-2 border-success m-sm-1 " type="submit">
+                <button type="button" class="btn btn-outline-secondary border border-2 border-secondary m-sm-1" *ngIf="isLoggedIn" (click)="logout()">Cerrar sesión</button>
+                <button class="btn btn-outline-success border border-2 border-success m-sm-1 " type="button">
                     <i class="bi-cart-fill me-1"></i>
                     Carrito
                     <span class="badge bg-success text-white ms-1 rounded-pill">0</span>
                 </button>
                 
-            </form>
+                
+            
         </div>
     </div>
 </nav>
