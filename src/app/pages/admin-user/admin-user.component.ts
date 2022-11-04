@@ -7,17 +7,35 @@ import { UserService } from 'src/app/services/user.service';
   templateUrl: './admin-user.component.html',
   styleUrls: ['./admin-user.component.css']
 })
+
 export class AdminUserComponent implements OnInit {
 
-  usuarios!: User[];
+  usuarios!: User[]
+  usuariosData!: UserData[]
 
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
     this.userService.findAll().subscribe((data) => { 
       this.usuarios = data
-      console.log(data)
+      const userArray: UserData[] = []
+      this.usuarios.forEach(function(user){
+        const userData = new UserData()
+        userData.id = user.id
+        userData.username = user.username
+        userData.email = user.email
+        console.log(user.roles[0].name)
+        if (user.roles[0].name === "ROLE_ADMIN"){
+          userData.roles = "Administrador"
+        } else {
+          userData.roles = "Usuario"
+        }
+        userArray.push(userData)
       })
+
+    this.usuariosData = userArray
+    
+    })
 
   }
 
@@ -29,4 +47,11 @@ export class AdminUserComponent implements OnInit {
     this.ngOnInit();
   }
 
+}
+
+export class UserData {
+  id!: number;
+  username!: string;
+  email!: string;
+  roles!: string;
 }

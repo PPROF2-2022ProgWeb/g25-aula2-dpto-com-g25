@@ -19,11 +19,11 @@
                </tr>
              </thead>
              <tbody>
-               <tr *ngFor="let user of usuarios">
+               <tr *ngFor="let user of usuariosData">
                  <td>{{ user.id }}</td>
                  <td>{{ user.username }}</td>
                  <td>{{ user.email }}</td>
-                 <td>{{ user.roles | json}}</td>
+                 <td>{{ user.roles }}</td>
                  <td><a (click)="deleteUser(user.id)" class="btn btn-danger">Borrar</a></td>
                </tr>
              </tbody>
