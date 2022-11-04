@@ -5,10 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-
 import { PagesModule } from './pages/pages.module'
 import { LayoutsModule } from './layouts/layouts.module';
-import { AuthInterceptor } from './services/auth.interceptor';
+import { authInterceptorProviders } from './services/auth.interceptor';
 
 
 
@@ -28,7 +27,7 @@ import { AuthInterceptor } from './services/auth.interceptor';
     HttpClientModule
   ],
   exports: [RouterModule],
-  providers: [AuthInterceptor],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -14,53 +14,23 @@
      <button type="button" class="btn btn-success center-block  px-4 px-lg-5 mt-3 " >Nuevo Producto</button> 
       </table>
 
-     
-    
-      <table class="table table-dark ">
-        <thead>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
           <tr>
-            <th scope="col">Id_producto</th>
+            <th scope="col">#id</th>
             <th scope="col">Nombre</th>
-            <th scope="col">Descripcion</th>
-            <th scope="col">precio</th>
-            <th scope="col">Administrar</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Precio</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Cerveza Diosa Tropical</td>
-            <td>La Diosa Tropical fue una marca de cerveza elaborada por Isenbeck destinado para el consumo del público aficionado a la bailanta y la cumbia. Fue lanzada a fines del año 1999 En el programa bailantero Siempre Sábado (Que luego pasa a llamarse Pasión de Sábado) Donde era fuertemente publicitada. Las imágenes de la marca fueron Marixa Balli y Mónica Ayos, después de una campaña de incógnito que duró más de tres meses. Destinada a un público de nivel económico bajo, salió a la venta con un coste de 75 centavos de peso el litro, uno de los más baratos del mercado de entonces.</td>
-            <td>  $250.00 </td>
-            <td>
-              <button type="button" class="btn btn-primary">Editar</button>
-            
-            <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Fernet Stock</td>
-            <td>Fernet Stock es un licor o aguardiente aromatizado, color caramelo y gusto amargo elaborado en Italia, Argentina y República Checa, con un contenido en alcohol de 40 a 41 %, elaborado a partir de una mezcla de 14 hierbas diferentes originarias de los Alpes y del entorno mediterráneo. Una variante menos amarga y alcoholizada es comercializada desde 1997 con el nombre Fernet Stock Citrus. El Stock fue inventado por la empresa Camis & Stock Company, fundada en 1884 por Lionello Stock en la ciudad italiana de Trieste, entonces parte del Imperio austrohúngaro y fabricado en la factoría de esta ciudad para su comercialización, a partir de 1927. La empresa fue objeto de varios procesos de nacionalización y durante la Segunda Guerra Mundial, requisada por las autoridades en aplicación de las leyes antisemitas del régimen nacionalsocialista. La producción también se amplió a la fábrica de Plzeň-Božkov, en la República Checa donde alcanzó gran difusión popularidad tras la Revolución de Terciopelo.</td>
-            <td>$799.00</td>
-            <td>
-           
-              <button type="button" class="btn btn-primary">Editar</button>
-           
-            
-            <button type="button" class="btn btn-danger">Eliminar</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row" >3</th>
-            <td>Hesperidina</td>
-            <td>La Hesperidina es una bebida argentina a base de corteza de naranjas amargas o agrias y dulces de frutos inmaduros los cuales tienen gran contenido de flavonoides (hesperidina, neohesperidina y narangina).1​ Su creador fue el estadounidense Melville Sewell Bagley, fundador de la empresa argentina Bagley, en 1864. Hoy se sigue produciendo y consumiendo en Argentina. Su sabor es suave, dulce, y se suele mezclar con agua tónica, agua gaseosa, gaseosa de lima y limón, o como mezcla en diferentes tragos o cócteles. Se le reconocen efectos antioxidantes y otros propios de los flavonoides que contiene.</td>
-            <td>$450.00</td>
-            <td>
-              <button type="button" class="btn btn-primary" ml-1>Editar</button> 
-       
-            <button type="button" class="btn btn-danger" >Eliminar</button>
-            </td>
+          <tr *ngFor="let producto of productos">
+            <td>{{ producto.id }}</td>
+            <td>{{ producto.nombre }}</td>
+            <td>{{ producto.descripcion }}</td>
+            <td>{{ producto.precio}}</td>
+            <td><a class="btn btn-success">Editar</a></td>
+            <td><a (click)="deleteProducto(producto.id)" class="btn btn-danger">Borrar</a></td>
           </tr>
         </tbody>
       </table>
