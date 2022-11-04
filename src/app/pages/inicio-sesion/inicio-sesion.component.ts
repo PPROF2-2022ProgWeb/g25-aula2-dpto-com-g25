@@ -16,9 +16,10 @@ export class InicioSesionComponent implements OnInit, OnDestroy {
     password: null
   };
   isLoggedIn!:boolean;
+  isAdmin!: boolean;
   isLoginFailed = false;
   errorMessage = '';
-  roles: string[] = [];
+  rol!: string;
   subscription!: Subscription;
 
   constructor(private authService: AuthService, private tokenStorage: TokenStoreService, 
@@ -27,8 +28,6 @@ export class InicioSesionComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
       this.loggedIn.changeLogged(true);
-      //this.isLoggedIn = true;
-      this.roles = this.tokenStorage.getUser().roles;
     }
     this.subscription = this.loggedIn.isLoggedIn.subscribe(logged => this.isLoggedIn = logged)
   }
@@ -43,9 +42,11 @@ export class InicioSesionComponent implements OnInit, OnDestroy {
 
         this.isLoginFailed = false;
         this.loggedIn.changeLogged(true);
-        this.roles = this.tokenStorage.getUser().roles;
-        if (this.roles.includes('ROLE_ADMIN')){
-        this.router.navigate(['/registro']);
+        this.rol = this.tokenStorage.getUser().roles;
+        if (this.rol.includes('ROLE_ADMIN')){
+          this.loggedIn.changeAdmin(true);
+          this.subscription = this.loggedIn.isAdmin.subscribe(admin => this.isAdmin = admin);
+          this.router.navigate(['/admin-producto']);
         }
       },
       error: err => {

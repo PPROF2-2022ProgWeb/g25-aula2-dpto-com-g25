@@ -8,73 +8,27 @@
    <div class="container px-4 px-lg-5 mt-3">
      <div class="row">
        <div class="col-12">
-         
-       
-         <table class="table table-dark ">
-           <thead>
-             <tr>
-               <th scope="col">Id</th>
-               <th scope="col">Nombre</th>
-               <th scope="col">Email</th>
-               <th scope="col">Contraseña</th>
-               <th scope="col">Administrar</th>
-             </tr>
-           </thead>
-           <tbody>
-             <tr>
-               <th scope="row">1</th>
-               <td>Juan Perez</td>
-               <td>@gmail</td>
-               <td>2846234</td>
-               <td>
-                 
-               
-               <button type="button" class="btn btn-danger">Eliminar</button>
+     
+           <table class="table table-bordered table-striped">
+             <thead class="thead-dark">
+               <tr>
+                 <th scope="col">#id</th>
+                 <th scope="col">Nombre</th>
+                 <th scope="col">Email</th>
+                 <th scope="col">Rol</th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr *ngFor="let user of usuarios">
+                 <td>{{ user.id }}</td>
+                 <td>{{ user.username }}</td>
+                 <td>{{ user.email }}</td>
+                 <td>{{ user.roles | json}}</td>
+                 <td><a (click)="deleteUser(user.id)" class="btn btn-danger">Borrar</a></td>
+               </tr>
+             </tbody>
+           </table>
 
-               
-                <label class="btn btn-secondary active">
-                  <input type="checkbox" checked autocomplete="off"> Admin
-                </label>
-            
-
-               </td>
-             </tr>
-             <tr>
-               <th scope="row">2</th>
-               <td>Rosa Melgar</td>
-               <td>@hotmail</td>
-               <td>3417345</td>
-               <td>
-              
-              
-              
-               
-               <button type="button" class="btn btn-danger">Eliminar</button>
-
-               <label class="btn btn-secondary active">
-                <input type="checkbox" checked autocomplete="off"> Admin
-              </label>
-
-               </td>
-             </tr>
-             <tr>
-               <th scope="row" >3</th>
-               <td>Esteban  kito</td>
-               <td>@gmail</td>
-               <td>1234453</td>
-               <td>
-                
-          
-               <button type="button" class="btn btn-danger" >Eliminar</button>
-
-               <label class="btn btn-secondary active">
-                <input type="checkbox" checked autocomplete="off"> Admin
-              </label>
-
-               </td>
-             </tr>
-           </tbody>
-         </table>
        </div>
      </div>
    </div>

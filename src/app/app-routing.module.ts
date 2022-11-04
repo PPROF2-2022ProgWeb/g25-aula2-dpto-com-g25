@@ -6,6 +6,8 @@ import { RegistroComponent } from './pages/registro/registro.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { InicioSesionComponent } from './pages/inicio-sesion/inicio-sesion.component';
 import { AdminProductoComponent } from './pages/admin-producto/admin-producto.component';
+import { AdminUserComponent } from './pages/admin-user/admin-user.component';
+
 
 
 const   ROUTES: Routes = [
@@ -15,6 +17,7 @@ const   ROUTES: Routes = [
   {path: 'quienes-somos', component: QuienesSomosComponent},
   {path: 'inicio-sesion', component: InicioSesionComponent},
   {path: 'admin-producto',component:AdminProductoComponent},
+  {path: 'admin-user',component:AdminUserComponent},
   {path:'**', pathMatch: 'full', redirectTo: 'inicio'},
   {path:'', pathMatch: 'full', redirectTo: 'inicio'}
 ];

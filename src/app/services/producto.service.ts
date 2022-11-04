@@ -27,7 +27,9 @@ export class ProductoService {
   }
 
   public delete(pid: String) {
+    console.log(this.productoUrl+'/'+pid);
     return this.http.delete(this.productoUrl+'/'+pid);
+    
   }
 
   public edit(pid: String, producto: Producto) {

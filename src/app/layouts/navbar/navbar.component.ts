@@ -17,14 +17,20 @@ export class NavbarComponent implements OnInit, OnDestroy {
     , private router: Router) { }
 
   isLoggedIn!: boolean;
+  isAdmin!: boolean;
+  rol!: string;
   subscription!: Subscription;
 
 
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
       this.loggedIn.changeLogged(true);
-      //this.roles = this.tokenStorage.getUser().roles;
+      this.rol = this.tokenStorage.getUser().roles;
+      if (this.rol.includes('ROLE_ADMIN')){
+        this.loggedIn.changeAdmin(true);
+      }
     }
+    this.subscription = this.loggedIn.isAdmin.subscribe(admin => this.isAdmin = admin);
     this.subscription = this.loggedIn.isLoggedIn.subscribe(logged => this.isLoggedIn = logged)
 
   }
@@ -35,6 +41,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   logout(): void {
     this.tokenStorage.signOut();
+    this.loggedIn.changeAdmin(false);
     this.loggedIn.changeLogged(false);
     this.router.navigate(['/inicio-sesion']);
   }
