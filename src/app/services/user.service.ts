@@ -20,8 +20,10 @@ export class UserService {
   }
 
   public delete(uid: String) {
-
     return this.http.delete(this.userUrl+'/'+uid);
-    
+  }
+
+  public changeRole(uid: String, rid: String) {
+    return this.http.put(this.userUrl+'/?userid='+uid+'&roleid='+rid,{});
   }
 }

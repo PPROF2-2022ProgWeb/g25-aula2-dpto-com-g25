@@ -23,7 +23,7 @@ export class InicioSesionComponent implements OnInit, OnDestroy {
   subscription!: Subscription;
 
   constructor(private authService: AuthService, private tokenStorage: TokenStoreService, 
-    private loggedIn: LoginDataService,private router: Router) { }
+    private loggedIn: LoginDataService, private router: Router) { }
 
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
@@ -43,6 +43,7 @@ export class InicioSesionComponent implements OnInit, OnDestroy {
         this.isLoginFailed = false;
         this.loggedIn.changeLogged(true);
         this.rol = this.tokenStorage.getUser().roles;
+        this.loggedIn.username(this.tokenStorage.getUser().username);
         if (this.rol.includes('ROLE_ADMIN')){
           this.loggedIn.changeAdmin(true);
           this.subscription = this.loggedIn.isAdmin.subscribe(admin => this.isAdmin = admin);

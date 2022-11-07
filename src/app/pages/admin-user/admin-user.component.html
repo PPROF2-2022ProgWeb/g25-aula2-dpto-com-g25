@@ -16,14 +16,19 @@
                  <th scope="col">Nombre</th>
                  <th scope="col">Email</th>
                  <th scope="col">Rol</th>
+                 <th scope="col">Cambiar rol</th>
+                 <th scope="col">Borrar</th>
                </tr>
              </thead>
              <tbody>
-               <tr *ngFor="let user of usuarios">
+               <tr *ngFor="let user of usuariosData">
                  <td>{{ user.id }}</td>
                  <td>{{ user.username }}</td>
                  <td>{{ user.email }}</td>
-                 <td>{{ user.roles | json}}</td>
+                 <td>{{ user.roles }}</td>
+                 <td><a (click)="changeRol(user.id, '2')" class="btn btn-primary">Admin</a>
+                  <a (click)="changeRol(user.id, '1')" class="btn btn-secondary">User</a>
+                  </td>
                  <td><a (click)="deleteUser(user.id)" class="btn btn-danger">Borrar</a></td>
                </tr>
              </tbody>
