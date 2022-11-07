@@ -19,6 +19,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   isLoggedIn!: boolean;
   isAdmin!: boolean;
   rol!: string;
+  username!: string;
   subscription!: Subscription;
 
 
@@ -26,13 +27,14 @@ export class NavbarComponent implements OnInit, OnDestroy {
     if (this.tokenStorage.getToken()) {
       this.loggedIn.changeLogged(true);
       this.rol = this.tokenStorage.getUser().roles;
+      this.loggedIn.username(this.tokenStorage.getUser().username);
       if (this.rol.includes('ROLE_ADMIN')){
         this.loggedIn.changeAdmin(true);
       }
     }
+    this.subscription = this.loggedIn.userName.subscribe(name => this.username = name)
     this.subscription = this.loggedIn.isAdmin.subscribe(admin => this.isAdmin = admin);
     this.subscription = this.loggedIn.isLoggedIn.subscribe(logged => this.isLoggedIn = logged)
-
   }
 
   ngOnDestroy() {

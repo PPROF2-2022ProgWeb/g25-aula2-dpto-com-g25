@@ -43,6 +43,10 @@ export class AdminUserComponent implements OnInit {
     this.userService.delete(userID.toString()).subscribe(result => this.refreshList())
   }
 
+  changeRol(userID: number, rol: String) {
+    this.userService.changeRole(userID.toString(),rol).subscribe(result => this.refreshList())
+  }
+
   refreshList() {
     this.ngOnInit();
   }
