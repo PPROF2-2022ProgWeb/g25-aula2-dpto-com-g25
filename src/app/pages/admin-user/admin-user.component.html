@@ -1,6 +1,5 @@
-<div class="container px-4 px-lg-5 mt-3 text-center">
+<div class="container px-4 px-lg-5 mt-3 text-center" *ngIf="isAdmin; else noAdmin">
     <h2>USUARIOS</h2>
-     </div>
    
    
    
@@ -37,3 +36,8 @@
        </div>
      </div>
    </div>
+</div>
+
+<ng-template #noAdmin>
+  <h4>Necesita permisos de administrador</h4>
+</ng-template>
