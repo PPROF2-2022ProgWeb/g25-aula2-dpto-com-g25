@@ -13,6 +13,7 @@ import { AdminProductoComponent } from './admin-producto/admin-producto.componen
 
 
 import { FormsModule} from '@angular/forms';
+import { NuevoProductoComponent } from './nuevo-producto/nuevo-producto.component';
 
 
 
@@ -27,6 +28,7 @@ import { FormsModule} from '@angular/forms';
     InicioSesionComponent,
     AdminUserComponent,
     AdminProductoComponent,
+    NuevoProductoComponent,
   ],
   imports: [
     CommonModule,

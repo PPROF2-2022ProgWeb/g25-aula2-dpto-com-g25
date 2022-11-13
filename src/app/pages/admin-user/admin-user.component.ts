@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
+import { LoginDataService } from 'src/app/services/login-data.service';
+import { TokenStoreService } from 'src/app/services/token-store.service';
+import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-admin-user',
@@ -10,12 +14,30 @@ import { UserService } from 'src/app/services/user.service';
 
 export class AdminUserComponent implements OnInit {
 
+  isLoggedIn!: boolean;
+  isAdmin!: boolean;
+  subscription!: Subscription;
+  rol!: string;
+
   usuarios!: User[]
   usuariosData!: UserData[]
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private loggedIn: LoginDataService, private tokenStorage: TokenStoreService) { }
 
   ngOnInit(): void {
+    if (this.tokenStorage.getToken()) {
+      this.loggedIn.changeLogged(true);
+      this.rol = this.tokenStorage.getUser().roles;
+      //this.loggedIn.username(this.tokenStorage.getUser().username);
+      if (this.rol.includes('ROLE_ADMIN')){
+        this.loggedIn.changeAdmin(true);
+      }
+    }
+    //this.subscription = this.loggedIn.userName.subscribe(name => this.username = name)
+    this.subscription = this.loggedIn.isAdmin.subscribe(admin => this.isAdmin = admin);
+    this.subscription = this.loggedIn.isLoggedIn.subscribe(logged => this.isLoggedIn = logged)
+
+
     this.userService.findAll().subscribe((data) => { 
       this.usuarios = data
       const userArray: UserData[] = []
