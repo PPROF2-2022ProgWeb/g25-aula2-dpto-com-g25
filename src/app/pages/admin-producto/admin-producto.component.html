@@ -17,7 +17,6 @@
             <th scope="col">Nombre</th>
             <th scope="col">Descripción</th>
             <th scope="col">Precio</th>
-            <th scope="col">Editar</th>
             <th scope="col">Borrar</th>
           </tr>
         </thead>
@@ -26,8 +25,7 @@
             <td>{{ producto.id }}</td>
             <td>{{ producto.nombre }}</td>
             <td>{{ producto.descripcion }}</td>
-            <td>{{ producto.precio}}</td>
-            <td><a class="btn btn-success">Editar</a></td>
+            <td>{{ producto.precio | currency}}</td>
             <td><a (click)="deleteProducto(producto.id)" class="btn btn-danger">Borrar</a></td>
           </tr>
         </tbody>

@@ -49,6 +49,7 @@ export class InicioSesionComponent implements OnInit, OnDestroy {
           this.subscription = this.loggedIn.isAdmin.subscribe(admin => this.isAdmin = admin);
           this.router.navigate(['/admin-producto']);
         }
+        this.router.navigate(['/inicio']);
       },
       error: err => {
         this.errorMessage = err.error.message;
