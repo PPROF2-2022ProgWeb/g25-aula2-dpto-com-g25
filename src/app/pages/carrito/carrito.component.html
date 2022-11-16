@@ -1,0 +1,31 @@
+<div class="container px-4 px-lg-5 mt-3 text-center">
+    <h2>CARRITO</h2>
+   
+    <div class="container px-4 px-lg-5 mt-3">
+     <div class="row">
+       <div class="col-12">
+         <table class="table table-bordered table-striped">
+           <thead class="thead-dark">
+             <tr>
+               <th scope="col">Nombre</th>
+               <th scope="col">Descripción</th>
+               <th scope="col">Precio</th>
+               <th scope="col">Borrar</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr *ngFor="let item of items">
+               <td>{{ item.nombre }}</td>
+               <td>{{ item.descripcion }}</td>
+               <td>{{ item.precio | currency}}</td>
+               <td><a  class="btn btn-danger" (click)="deleteItem(item.id)">Borrar</a></td>
+             </tr>
+           </tbody>
+         </table>
+       </div>
+     </div>
+     <div class="text-right"><h4>Total: {{precioFinal}}</h4></div>
+     <button class="btn btn-success">Pagar</button>
+     <button class="btn btn-primary" [routerLink]="['inicio']">Seguir comprando</button>
+   </div>
+   </div>
