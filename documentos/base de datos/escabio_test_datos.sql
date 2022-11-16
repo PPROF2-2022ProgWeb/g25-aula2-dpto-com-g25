@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.30, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.31, for Linux (x86_64)
 --
 -- Host: localhost    Database: escabio_test
 -- ------------------------------------------------------
--- Server version	8.0.30
+-- Server version	8.0.31
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -60,7 +60,7 @@ CREATE TABLE `producto` (
   PRIMARY KEY (`id_producto`),
   KEY `producto_ibfk_1` (`id_categoria`),
   CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id_categoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `producto` (
 
 LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-INSERT INTO `producto` VALUES (5,'./assets/img/fernet-stock.jpg','Fernet Stock','Un fernet horrible, destapa caños','Fernet Stock es un licor o aguardiente aromatizado, color caramelo y gusto amargo  elaborado en Italia, Argentina\n      y República Checa, con un contenido en alcohol de 40 a 41 %, elaborado a partir de una mezcla de 14 hierbas diferentes originarias de los Alpes\n       y del entorno mediterráneo.',250.5,2),(6,'./assets/img/cerveza-diosa.jpg','Cerveza Diosa Tropical','¡Cumbia nena!','La Diosa Tropical fue una marca de cerveza elaborada por Isenbeck destinado para el consumo del público aficionado a la bailanta y la cumbia.\n      Fue lanzada a fines del año 1999 En el programa bailantero Siempre Sábado (Que luego pasa a llamarse Pasión de Sábado) Donde era fuertemente publicitada.',150.3,1),(7,'./assets/img/hesperidina.jpg','Hesperidina','El trago de los viejos','La Hesperidina es una bebida argentina a base de corteza de naranjas amargas o agrias y dulces de frutos inmaduros los cuales tienen gran\n       contenido de flavonoides (hesperidina, neohesperidina y narangina).1​ Su creador fue el estadounidense Melville Sewell Bagley, fundador de la empresa\n        argentina Bagley, en 1864.',559,2),(8,'./assets/img/ron.webp','Ron Havanna','Oye chico','Havana Club es una marca de ron que es fabricado en Santa Cruz del Norte, Cuba. La marca fue establecida en 1934 por José Arechabala S.A. \n      y fue nacionalizada en 1960 después de la Revolución cubana.',870,2),(9,'./assets/img/amargo-obrero.webp','Amargo Obrero','El trago del proletariado','El Amargo Obrero es una bebida inventada en la ciudad de Rosario, Santa Fe, en el año 1888, como una mezcla de hierbas aromáticas serranas. ',675,2),(10,'./assets/img/campari.jpg','Campari','Con naranja','Campari es una bebida alcohólica de grado medio, tonificante y refrescante, calificable como aperitivo, de característico color rojo \n      y sabor amargo. La marca es propiedad del Grupo Campari. ',540,2),(11,'./assets/img/vinysoda.jpg','Vinysoda','Con un susto de soda','Elaborado con uvas bonarda producidas en la provincia vitivinícola de Mendoza y fusionado con agua gasificada, \n      Vinysoda es presentado en packaging lata de 473 cc. Únicos en el mercado pero no en tus origenes, en aquellos recuerdos de tu infancia,\n       así es como nace Vinysoda, una marca joven y canchera 100% esencia argentina.',148,2);
+INSERT INTO `producto` VALUES (5,'./assets/img/fernet-stock.jpg','Fernet Stock','Un fernet horrible, destapa caños','Fernet Stock es un licor o aguardiente aromatizado, color caramelo y gusto amargo  elaborado en Italia, Argentina\n      y República Checa, con un contenido en alcohol de 40 a 41 %, elaborado a partir de una mezcla de 14 hierbas diferentes originarias de los Alpes\n       y del entorno mediterráneo.',250.5,2),(6,'./assets/img/cerveza-diosa.jpg','Cerveza Diosa Tropical','¡Cumbia nena!','La Diosa Tropical fue una marca de cerveza elaborada por Isenbeck destinado para el consumo del público aficionado a la bailanta y la cumbia.\n      Fue lanzada a fines del año 1999 En el programa bailantero Siempre Sábado (Que luego pasa a llamarse Pasión de Sábado) Donde era fuertemente publicitada.',150.3,1),(7,'./assets/img/hesperidina.jpg','Hesperidina','El trago de los viejos','La Hesperidina es una bebida argentina a base de corteza de naranjas amargas o agrias y dulces de frutos inmaduros los cuales tienen gran\n       contenido de flavonoides (hesperidina, neohesperidina y narangina).1​ Su creador fue el estadounidense Melville Sewell Bagley, fundador de la empresa\n        argentina Bagley, en 1864.',559,2),(16,'https://ardiaqa.vteximg.com.br/arquivos/ids/183971-1000-1000/CERVEZA-RETORNABLE-PALERMO-9701000-ML.jpg','Palermo','Cerveza palermo','Una de las de antes',350,1),(17,'https://www.magicovino.com/wp-content/uploads/2020/06/fernet.jpg','Fernet Branca','Fernet como la gente','El que quieren todes',950,1),(18,'https://jumboargentina.vteximg.com.br/arquivos/ids/457259-750-750/Frizze-Evolution-Blue-1-Litro-1-257754.jpg','Frizze','una cosa horrible','Venenaso color nafta super',450,1);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,7 +120,7 @@ CREATE TABLE `user_roles` (
 
 LOCK TABLES `user_roles` WRITE;
 /*!40000 ALTER TABLE `user_roles` DISABLE KEYS */;
-INSERT INTO `user_roles` VALUES (2,1),(3,1),(4,1),(1,2);
+INSERT INTO `user_roles` VALUES (5,1),(1,2),(2,2),(6,2);
 /*!40000 ALTER TABLE `user_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -139,7 +139,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UKr43af9ap4edm43mmtq01oddj6` (`username`),
   UNIQUE KEY `UK6dotkott2kjsp8vw4d0m25fb7` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -148,7 +148,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'esaracho','sarachoesteban@gmail.com','$2a$10$/x0lX13CbK6dEzi1hIpLuedIUVKwzGwbTbUq/sIyNKgh6xNYZajp2'),(2,'esteban','esteban@gmail.com','$2a$10$NEVHnC/x.vmEMNqgpXC3PuyMkyOra0uyHp.Jyo6Y0aFU5nchogd8a'),(3,'matias','matias@mail.com','$2a$10$4OwLdNedMeZaSiB38if1XOUWK6hx7lcI6k7Tyloxb.uwTdfPCxdYq'),(4,'flavio','flavio@gmail.com','$2a$10$uzTIrhjQlmlw4Erwcxvt0eqHAKHaF.5V04OVem9klpGirn7/sG5eC');
+INSERT INTO `users` VALUES (1,'esaracho','sarachoesteban@gmail.com','$2a$10$/x0lX13CbK6dEzi1hIpLuedIUVKwzGwbTbUq/sIyNKgh6xNYZajp2'),(2,'esteban','esteban@gmail.com','$2a$10$NEVHnC/x.vmEMNqgpXC3PuyMkyOra0uyHp.Jyo6Y0aFU5nchogd8a'),(5,'ursula','ursulaalvarez2011@gmail.com','$2a$10$nKZ.AjTDhTw5SDDBdF9O/.eZjYRrkznCyiU.lreDqvIvXBdYjPYv6'),(6,'admin','admin@mail.com','$2a$10$D.NCdA5YyizLkJlZFdWEYOM3NYsIe43SNlekbaPIURiuFH3Bxu4iK');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -161,4 +161,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-29 22:49:43
+-- Dump completed on 2022-11-15 22:16:42
