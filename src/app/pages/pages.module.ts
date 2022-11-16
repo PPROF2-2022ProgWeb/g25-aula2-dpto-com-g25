@@ -14,6 +14,7 @@ import { AdminProductoComponent } from './admin-producto/admin-producto.componen
 
 import { FormsModule} from '@angular/forms';
 import { NuevoProductoComponent } from './nuevo-producto/nuevo-producto.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 
 
@@ -29,6 +30,7 @@ import { NuevoProductoComponent } from './nuevo-producto/nuevo-producto.componen
     AdminUserComponent,
     AdminProductoComponent,
     NuevoProductoComponent,
+    CarritoComponent,
   ],
   imports: [
     CommonModule,

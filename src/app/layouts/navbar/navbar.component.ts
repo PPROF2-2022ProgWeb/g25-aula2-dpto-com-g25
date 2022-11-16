@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { LoginDataService } from 'src/app/services/login-data.service';
 import { TokenStoreService } from 'src/app/services/token-store.service';
+import { CarritoService } from 'src/app/services/carrito.service';
 import { Subscription } from 'rxjs';
 import { Router } from '@angular/router';
 
@@ -14,7 +15,7 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit, OnDestroy {
 
   constructor(private loggedIn: LoginDataService, private tokenStorage: TokenStoreService
-    , private router: Router) { }
+   ,private carritoService: CarritoService , private router: Router) { }
 
   isLoggedIn!: boolean;
   isAdmin!: boolean;
@@ -35,7 +36,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.subscription = this.loggedIn.userName.subscribe(name => this.username = name)
     this.subscription = this.loggedIn.isAdmin.subscribe(admin => this.isAdmin = admin);
     this.subscription = this.loggedIn.isLoggedIn.subscribe(logged => this.isLoggedIn = logged)
-  }
+    }
 
   ngOnDestroy() {
      this.subscription.unsubscribe();
