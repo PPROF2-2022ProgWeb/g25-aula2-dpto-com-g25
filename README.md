@@ -4,4 +4,9 @@ App del Escabio es una aplicación web de ecommerce orientada a la venta de bebi
 
 # Como ejecutar la aplicación
 
-- Clonar el repositorio
+- Clonar el repositorio `git clone https://github.com/PPROF2-2022ProgWeb/g25-aula2-dpto-com-g25.git`
+- Importar el backend del proyecto del directorio `api-spring/escabio/`
+- Importar la base de datos de prueba (Con productos y usuarios creados) de `documentos/base de datos/escabio_test_datos.sql`
+- Modificar los datos de la BD en application.properties del backend
+- Las credenciales del usuario administrador son: usuario `admin` / contraseña `admin1234`
+- En la raiz del directorio ejecutar `npm install` y `ng serve -o` para iniciar el frontend
